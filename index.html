@@ -9,26 +9,24 @@
 		<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	</head>
     <body>
-			<script>
-				window.fbAsyncInit = function() {
-						FB.init({
-						appId            : '911243109056820',
-						autoLogAppEvents : true,
-						xfbml            : true,
-						version          : 'v3.0'
-						});
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
-						FB.CustomerChat.show(true);                                
-				};
-				
-				(function(d, s, id){
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (d.getElementById(id)) {return;}
-						js = d.createElement(s); js.id = id;
-						js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-						fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));
-		</script>         
+		<!-- Your customer chat code -->
+		<div class="fb-customerchat"
+			attribution="setup_tool"
+			page_id="839730906220856"
+			theme_color="#fa3c4c"
+			logged_in_greeting="Hi! Ready to submit a screenshot?"
+			logged_out_greeting="Hi! Ready to submit a screenshot?">
+		</div>
 		<header>
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-inner"> <!-- made changes here-->
@@ -82,7 +80,7 @@
 								<h2 class="title top-buffer1">Meet Sentinel</h2>
 								<h3 class="subtitle top-buffer2">Part neural network,<br> part ad blocker,<br> all machine.</h3>
 								<p class="top-buffer3"><b>Your Mission:</b> Teach Sentinel about bad ads by feeding it screenshots of ads in your Facebook feed. The more ads it sees, the more powerful it becomes.</p>
-								<a href="#help_section"  type="button" class="btn btn-primary top-buffer2">FEED THE MACHINE</a>
+								<a href="#help_section"  type="button" class="btn btn-primary top-buffer2" onclick="FB.CustomerChat.show(true);">FEED THE MACHINE</a>
 							</div>
 						</div>
 					</div>
