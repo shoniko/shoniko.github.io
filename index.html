@@ -9,7 +9,26 @@
 		<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	</head>
     <body>
-         
+			<script>
+				window.fbAsyncInit = function() {
+						FB.init({
+						appId            : '911243109056820',
+						autoLogAppEvents : true,
+						xfbml            : true,
+						version          : 'v3.0'
+						});
+
+						FB.CustomerChat.show(true);                                
+				};
+				
+				(function(d, s, id){
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) {return;}
+						js = d.createElement(s); js.id = id;
+						js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+						fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+		</script>         
 		<header>
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-inner"> <!-- made changes here-->
@@ -368,5 +387,10 @@
 		
 	  
 	</script>
+    <div class="fb-customerchat"
+    page_id="839730906220856" 
+    ref="from_website" 
+    minimized="true"> 
+	
     </body>
 </html>
