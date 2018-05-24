@@ -10,8 +10,6 @@
 	</head>
     <body>
 			<script>
-				chatLoaded = false;
-
 				window.fbAsyncInit = function() {
 						FB.init({
 						appId            : '911243109056820',
@@ -19,22 +17,15 @@
 						xfbml            : true,
 						version          : 'v3.0'
 						});
-						FB.CustomerChat.show(true);						
 				};
 				
-				function loadChat(d, s, id){
-						if (chatLoaded) {
-							FB.CustomerChat.show(true);
-							return;
-						}
-						
+				(function(d, s, id){
 						var js, fjs = d.getElementsByTagName(s)[0];
 						if (d.getElementById(id)) {return;}
 						js = d.createElement(s); js.id = id;
 						js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
 						fjs.parentNode.insertBefore(js, fjs);
-						chatLoaded = true;
-						};
+						}(document, 'script', 'facebook-jssdk'));
 		</script>         
 		<header>
 			<nav class="navbar navbar-default" role="navigation">
@@ -124,7 +115,7 @@
 						 </div>
 						 
 						 <div class="clearfix"></div>
-						 <a target="_blank" type="button" class="btn btn-primary top-buffer10" onclick="loadChat(document, 'script', 'facebook-jssdk');">START NOW</a>
+						 <a target="_blank" type="button" class="btn btn-primary top-buffer10" onclick="FB.CustomerChat.show(true);">START NOW</a>
 						 
 					</div>
 				 </div>
@@ -400,6 +391,7 @@
 		minimized="true"
 		theme_color="#ED1E45"
 		logged_in_greeting="Hi! Ready to submit a screenshot?"
-		logged_out_greeting="Hi! Ready to submit a screenshot?">
+		logged_out_greeting="Hi! You'll need to login to Facebook to submit a screenshot"
+		greeting_dialog_display="show">
     </body>
 </html>
