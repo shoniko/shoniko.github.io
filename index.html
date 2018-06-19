@@ -23,7 +23,7 @@
             "border": "#fff"
 					}
 				},
-				"position": "bottom-left",
+				"position": "top",
 				"content": {
 					"href": "https://adblockplus.org/en/privacy"
 				}
@@ -41,13 +41,14 @@
 						});
 				};
 				
-				(function(d, s, id){
+				function loadFbBot(d, s, id) {
 						var js, fjs = d.getElementsByTagName(s)[0];
 						if (d.getElementById(id)) {return;}
 						js = d.createElement(s); js.id = id;
 						js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
 						fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));
+						};
+
 		</script>         
 		<header>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -111,7 +112,7 @@
 								<h2 class="title top-buffer1">Meet Sentinel</h2>
 								<h3 class="subtitle top-buffer2">the artificial intelligence ad detector.</h3>
 								<p class="top-buffer3"><b>Your Mission:</b> Feed Sentinel screenshots of ads in your Facebook feed to train it to automatically detect ads.</p>
-								<a href="#help_section"  type="button" class="btn btn-primary top-buffer2">FEED SENTINEL</a>
+								<a href="#help_section"  type="button" class="btn btn-primary top-buffer2" onclick="loadFbBot(document, 'script', 'facebook-jssdk');">FEED SENTINEL</a>
 							</div>
 						</div>
 					</div>
