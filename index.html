@@ -11,19 +11,26 @@
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link rel="stylesheet" type="text/css" href="assets/css//cookieconsent.min.css" />
 	<script src="assets/js/cookieconsent.min.js"></script>
-<script>
-	window.addEventListener("load", function(){
-	window.cookieconsent.initialise({
-		"palette": {
-			"popup": {
-				"background": "#000"
-			},
-			"button": {
-				"background": "#f1d600"
-			}
-		},
-		"position": "top"
-	})});
+	<script>
+		window.addEventListener("load", function () {
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+						"background": "#ED1E45",
+						"text": "#ffdddd"
+					},
+					"button": {
+						"background": "transparent",
+						"text": "#fff",
+						"border": "#fff"
+					}
+				},
+				"position": "top",
+				"content": {
+					"href": "https://adblockplus.org/en/privacy"
+				}
+			})
+		});
 	</script>
 </head>
 
@@ -127,13 +134,14 @@
 								Blocking ads is a tricky business. Websites like Facebook use technology to avoid and disrespect ad-blocking users.
 							</p>
 							<p class="top-buffer3">
-								Technology helps us fight back. Sentinel uses machine learning to detect Facebook ads visually, leaving ads with nowhere to hide. The more Facebook screenshots you submit, the faster Sentinel will learn.
+								Technology helps us fight back. Sentinel uses machine learning to detect Facebook ads visually, leaving ads with nowhere
+								to hide. The more Facebook screenshots you submit, the faster Sentinel will learn.
 							</p>
 							<p class="top-buffer3">
 								Team up with Sentinel for the future of ad blocking!
 							</p>
 
-							
+
 							<a href="#help_section" type="button" class="btn btn-primary top-buffer2" onclick="loadFbBot(document, 'script', 'facebook-jssdk');">FEED SENTINEL</a>
 						</div>
 					</div>
@@ -153,7 +161,8 @@
 					<div class="col-sm-4 top-buffer2">
 						<div class="3step first"></div>
 						<h4 class="title top-buffer4">Step 1</h4>
-						<p class="top-buffer1">Take a screenshot of your Facebook feed that contains an ad. (If you use Adblock Plus, you’ll need to <a href="https://adblockplus.org/en/faq_basics#disable">disable</a> it temporarily then reload the page to get ads)</p>
+						<p class="top-buffer1">Take a screenshot of your Facebook feed that contains an ad. (If you use Adblock Plus, you’ll need to
+							<a href="https://adblockplus.org/en/faq_basics#disable">disable</a> it temporarily then reload the page to get ads)</p>
 					</div>
 
 					<div class="col-sm-4 top-buffer2">
@@ -224,138 +233,143 @@
 									<div class="panel-body">Sentinel is learning how to
 										<u>detect ads</u> algorithmically. Pure A.I. ad blocking.</div>
 								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq2">What's wrong with Adblock Plus currently?</a>
+									</h4>
 								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-											<a data-toggle="collapse" data-parent="#accordion" href="#faq2">What's wrong with Adblock Plus currently?</a>
-										</h4>
-									</div>
-									<div id="faq2" class="panel-collapse collapse">
-										<div class="panel-body">Nothing, but it could be more efficient. Currently, we block ads by creating huge filter lists of all the known
-											ad servers -- and we feed those instructions to your browser every day to block ads from those sources. We hope
-											to streamline that process by making Adblock Plus smart enough to just recognize intrusive and ‘bad’ ads on its
-											own.</div>
+								<div id="faq2" class="panel-collapse collapse">
+									<div class="panel-body">Nothing, but it could be more efficient. Currently, we block ads by creating huge filter lists of all the known
+										ad servers -- and we feed those instructions to your browser every day to block ads from those sources. We hope
+										to streamline that process by making Adblock Plus smart enough to just recognize intrusive and ‘bad’ ads on its
+										own.
 									</div>
 								</div>
+							</div>
 
-									<div class="panel panel-default">
-										<div class="panel-heading">
-											<h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#faq3">Why are you doing this now?</a>
-											</h4>
-										</div>
-										<div id="faq3" class="panel-collapse collapse">
-											<div class="panel-body">Facebook (and others) are getting better at disguising ads from ad blockers and using circumvention techniques
-												to show you ads anyway. These tricks disregard your stated preference to block ads! We’re pretty good at coming
-												up with workarounds to these
-												<u>circumvention techniques</u> now, but to respond even faster we’re training an A.I. system to help us.</div>
-										</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq3">Why are you doing this now?</a>
+									</h4>
+								</div>
+								<div id="faq3" class="panel-collapse collapse">
+									<div class="panel-body">Facebook (and others) are getting better at disguising ads from ad blockers and using circumvention techniques to
+										show you ads anyway. These tricks disregard your stated preference to block ads! We’re pretty good at coming up
+										with workarounds to these
+										<u>circumvention techniques</u> now, but to respond even faster we’re training an A.I. system to help us.</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq4">What is the role of Adblock Plus in all of this?</a>
+									</h4>
+								</div>
+								<div id="faq4" class="panel-collapse collapse">
+									<div class="panel-body">eyeo, the company that makes Adblock Plus, is developing the Sentinel technology.</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq5">Why are you calling this 'The Sentinel'?</a>
+									</h4>
+								</div>
+								<div id="faq5" class="panel-collapse collapse">
+									<div class="panel-body">Because we thought that it sounds awesome and fearsome. We want aggressive advertisers to know that we’re serious
+										about protecting consumers’ rights. And we want you to know that we have your back.</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq6">What will you do with my Facebook screenshots after I submit them?</a>
+									</h4>
+								</div>
+								<div id="faq6" class="panel-collapse collapse">
+									<div class="panel-body">We use them train Sentinel’s neural networks (it’s a type of Artificial Intelligence). We literally show the Sentinel
+										algorithm what a bunch of ‘bad’ ads look like and tell it “This is an intrusive ad; block anything that looks like
+										this.” This is how the ‘machine learning’ part of AI works.
+										<br/>
+										<br/>If you would like your screenshot(s) to be deleted, just type “delete” in the Messenger chat at any time (even
+										long after you’ve submitted them). </div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq7">Does it work for any type of ads? Or just Facebook ads?</a>
+									</h4>
+								</div>
+								<div id="faq7" class="panel-collapse collapse">
+									<div class="panel-body">For now, Sentinel is learning just Facebook ads. But we’ll expand to other ad types really soon.</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq8">Why did you decide to start with Facebook ads?</a>
+									</h4>
+								</div>
+								<div id="faq8" class="panel-collapse collapse">
+									<div class="panel-body">Because Facebook is by far the most aggressive at disguising ad tags and forcing people to see ads even when they’ve
+										said ‘no’.</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq9">What kind of technology does Sentinel use?</a>
+									</h4>
+								</div>
+								<div id="faq9" class="panel-collapse collapse">
+									<div class="panel-body">Sentinel uses neural networks and machine learning. Neural networks are a type of statistical model (i.e. an algorithm)
+										that is inspired by biological networks in our brains. Along with machine learning and deep learning, neural networks
+										technology is part of the larger ‘Artificial Intelligence’ sector. If you want to go a bit deeper, you can read
+										this overview of ‘
+										<a style="color:#333; text-decoration: underline;" target="_blank" href="https://analyticsindiamag.com/6-types-of-artificial-neural-networks-currently-being-used-in-todays-technology/">6 Types of Artificial Neural Networks Being Used In Machine Learning</a>’. Shoot us a note when you’ve finished.
 									</div>
+								</div>
+							</div>
 
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a data-toggle="collapse" data-parent="#accordion" href="#faq4">What is the role of Adblock Plus in all of this?</a>
-												</h4>
-											</div>
-											<div id="faq4" class="panel-collapse collapse">
-												<div class="panel-body">eyeo, the company that makes Adblock Plus, is developing the Sentinel technology.</div>
-											</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq10">Why do you need people to submit their Facebook feeds? Why can't you do it internally?</a>
+									</h4>
+								</div>
+								<div id="faq10" class="panel-collapse collapse">
+									<div class="panel-body">To train our Sentinel neural networks to recognize what ‘bad’ Facebook ads look like, we need lots and lots of examples.
+										So we’re asking our hundreds of millions of users to help out. Be sure to tell your friends to help out also!</div>
+								</div>
+							</div>
 
-											<div class="panel panel-default">
-												<div class="panel-heading">
-													<h4 class="panel-title">
-														<a data-toggle="collapse" data-parent="#accordion" href="#faq5">Why are you calling this 'The Sentinel'?</a>
-													</h4>
-												</div>
-												<div id="faq5" class="panel-collapse collapse">
-													<div class="panel-body">Because we thought that it sounds awesome and fearsome. We want aggressive advertisers to know that we’re serious
-														about protecting consumers’ rights. And we want you to know that we have your back.</div>
-												</div>
-											</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#faq6">What will you do with my Facebook screenshots after I submit them?</a>
-														</h4>
-													</div>
-													<div id="faq6" class="panel-collapse collapse">
-														<div class="panel-body">We use them train Sentinel’s neural networks (it’s a type of Artificial Intelligence). We literally show the
-															Sentinel algorithm what a bunch of ‘bad’ ads look like and tell it “This is an intrusive ad; block anything
-															that looks like this.” This is how the ‘machine learning’ part of AI works.
-															<br/>
-															<br/>If you would like your screenshot(s) to be deleted, just type “delete” in the Messenger chat at any time (even
-															long after you’ve submitted them). </div>
-													</div>
-												</div>
-
-													<div class="panel panel-default">
-														<div class="panel-heading">
-															<h4 class="panel-title">
-																<a data-toggle="collapse" data-parent="#accordion" href="#faq7">Does it work for any type of ads? Or just Facebook ads?</a>
-															</h4>
-														</div>
-														<div id="faq7" class="panel-collapse collapse">
-															<div class="panel-body">For now, Sentinel is learning just Facebook ads. But we’ll expand to other ad types really soon.</div>
-														</div>
-													</div>
-
-														<div class="panel panel-default">
-															<div class="panel-heading">
-																<h4 class="panel-title">
-																	<a data-toggle="collapse" data-parent="#accordion" href="#faq8">Why did you decide to start with Facebook ads?</a>
-																</h4>
-															</div>
-															<div id="faq8" class="panel-collapse collapse">
-																<div class="panel-body">Because Facebook is by far the most aggressive at disguising ad tags and forcing people to see ads even when
-																	they’ve said ‘no’.</div>
-															</div>
-														</div>
-
-															<div class="panel panel-default">
-																<div class="panel-heading">
-																	<h4 class="panel-title">
-																		<a data-toggle="collapse" data-parent="#accordion" href="#faq9">What kind of technology does Sentinel use?</a>
-																	</h4>
-																</div>
-																<div id="faq9" class="panel-collapse collapse">
-																	<div class="panel-body">Sentinel uses neural networks and machine learning. Neural networks are a type of statistical model (i.e.
-																		an algorithm) that is inspired by biological networks in our brains. Along with machine learning and deep
-																		learning, neural networks technology is part of the larger ‘Artificial Intelligence’ sector. If you want
-																		to go a bit deeper, you can read this overview of ‘
-																		<a style="color:#333; text-decoration: underline;" target="_blank"
-																		 href="https://analyticsindiamag.com/6-types-of-artificial-neural-networks-currently-being-used-in-todays-technology/">6 Types of Artificial Neural Networks Being Used In Machine Learning</a>’. Shoot us a note when you’ve
-																		finished.</div>
-																</div>
-															</div>
-
-																<div class="panel panel-default">
-																	<div class="panel-heading">
-																		<h4 class="panel-title">
-																			<a data-toggle="collapse" data-parent="#accordion" href="#faq10">Why do you need people to submit their Facebook feeds? Why can't you do it internally?</a>
-																		</h4>
-																	</div>
-																	<div id="faq10" class="panel-collapse collapse">
-																		<div class="panel-body">To train our Sentinel neural networks to recognize what ‘bad’ Facebook ads look like, we need lots and
-																			lots of examples. So we’re asking our hundreds of millions of users to help out. Be sure to tell your
-																			friends to help out also!</div>
-																	</div>
-																</div>
-
-																	<div class="panel panel-default">
-																		<div class="panel-heading">
-																			<h4 class="panel-title">
-																				<a data-toggle="collapse" data-parent="#accordion" href="#faq11">What do you mean by 'future of ad blocking'?</a>
-																			</h4>
-																		</div>
-																		<div id="faq11" class="panel-collapse collapse">
-																			<div class="panel-body">We’re experimenting with technologies that will better evade ‘circumvention’ techniques (aka anti-ad blockers
-																				like Sourcepoint and Pagefair). These techniques disregard your stated preference to block ads, and find
-																				a way to shove ads in front of you anyways. Sentinel is learning how to block ads algorithmically.</div>
-																		</div>
-																	</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#faq11">What do you mean by 'future of ad blocking'?</a>
+									</h4>
+								</div>
+								<div id="faq11" class="panel-collapse collapse">
+									<div class="panel-body">We’re experimenting with technologies that will better evade ‘circumvention’ techniques (aka anti-ad blockers like
+										Sourcepoint and Pagefair). These techniques disregard your stated preference to block ads, and find a way to shove
+										ads in front of you anyways. Sentinel is learning how to block ads algorithmically.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<footer>
@@ -392,8 +406,7 @@
 								<a href="https://play.google.com/store/apps/details?id=org.adblockplus.adblockplussbrowser" target="_blank">Blockers Adblock Plus for Samsung</a>
 							</li>
 							<li>
-								<a href="https://itunes.apple.com/us/app/adblock-plus-abp-remove-ads-browse-faster-without-tracking/id1028871868?mt=8"
-								 target="_blank">Adblock Plus for Safari</a>
+								<a href="https://itunes.apple.com/us/app/adblock-plus-abp-remove-ads-browse-faster-without-tracking/id1028871868?mt=8" target="_blank">Adblock Plus for Safari</a>
 							</li>
 						</ul>
 					</div>
