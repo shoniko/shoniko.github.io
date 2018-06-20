@@ -51,7 +51,11 @@
 			js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
 			fjs.parentNode.insertBefore(js, fjs);
 		};
-
+		
+		function openFbChat() {
+			loadFbBot(document, 'script', 'facebook-jssdk');
+			FB.CustomerChat.show(true);
+		}
 	</script>
 	<header>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -140,8 +144,12 @@
 								Team up with Sentinel for the future of ad blocking!
 							</p>
 
-
-							<a href="#help_section" type="button" class="btn btn-primary top-buffer2" onclick="loadFbBot(document, 'script', 'facebook-jssdk');">FEED SENTINEL</a>
+							<a href="#help_section" type="button"
+							   class="btn btn-primary top-buffer2" 
+							   onclick="openFbChat();"
+							   data-toggle="tooltip"
+							   data-placement="left"
+							   title="Please note that Messenger is hosted by Facebook. When you click on this button to help train Sentinel with your screenshots, you will activate Messenger, and some personal data, including the IP address, will be transfered to Facebook. For more information, please review Facebook's privacy policy">FEED SENTINEL</a>
 						</div>
 					</div>
 				</div>
@@ -177,8 +185,12 @@
 					</div>
 
 					<div class="clearfix"></div>
-					<a target="_blank" type="button" class="btn btn-primary top-buffer10" onclick="FB.CustomerChat.show(true);">START NOW</a>
-
+					<a target="_blank" type="button"
+					   class="btn btn-primary top-buffer10"
+					   onclick="openFbChat();"
+					   data-toggle="tooltip"
+					   data-placement="left"
+					   title="Please note that Messenger is hosted by Facebook. When you click on this button to help train Sentinel with your screenshots, you will activate Messenger, and some personal data, including the IP address, will be transfered to Facebook. For more information, please review Facebook's privacy policy">START NOW</a>
 				</div>
 			</div>
 		</div>
@@ -508,7 +520,11 @@
 						}, 1000);
 					}
 				}
-			});	  
+			});
+
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip(); 
+			});
 	</script>
 	<div class="fb-customerchat" page_id="839730906220856" ref="from_website" minimized="true" theme_color="#ED1E45" logged_in_greeting="Hi! Ready to submit a screenshot?"
 	 logged_out_greeting="Hi! You'll need to login to Facebook to submit a screenshot" greeting_dialog_display="show">
