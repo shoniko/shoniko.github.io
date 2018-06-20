@@ -178,7 +178,10 @@
    footer .social_icon li span.instagram{ background: url(../images/social_icon.png) -150px  -1px; background-size: 100px;}
    footer .social_icon li span.twitter{ background: url(../images/social_icon.png) -1px  -150px; background-size: 100px;}
    
-   
+   .tooltip-arrow,
+   .abp-tooltip + .tooltip > .tooltip-inner {background-color: #E0E0E0; color: #212121;}   
+   .abp-tooltip + .tooltip.top > .tooltip-arrow {background-color: #E0E0E0; color: #212121;}
+
    footer .social_icon li a:after{display:none;}
    
    .gradient {  position: relative;  background: linear-gradient(41deg, rgba(226,243,248,1) 0%,rgb(255, 255, 255) 100%);  -webkit-border-radius:50px;  -moz-border-radius:50px;  border-radius:50%; height:662px;width:662px;}
