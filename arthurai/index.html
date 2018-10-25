@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <script src="index.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous">
+        <style>
+            .inputs {
+                width: 600px
+            }
+            .results {
+                width: 600px
+            }
+            .blockit {
+                width: 600px;
+                background-color: red;
+                color: white;
+                font-size: 24px
+            }
+            .dontblockit {
+                width: 600px;
+                background-color: green;
+                color: white;
+                font-size: 14px
+            }
+            .wizard-image {
+                width: 350px
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col col-md-6">
+                <table>
+                <tr>
+                <td>
+                    <image src="wizard.jpg" class="wizard-image"></image>
+                </td>
+                <td>
+                    <input type="text" onchange="predict()" oninput="predict()" id="url" placeholder="URL" class="inputs"></input>
+                    <select onchange="predict()" id="type" class="inputs">
+                        <option value="SCRIPT">SCRIPT</option>
+                        <option value="SUBDOCUMENT">SUBDOCUMENT</option>
+                        <option value="IMAGE">IMAGE</option>
+                        <option value="XMLHTTPREQUEST">XMLHTTPREQUEST</option>
+                        <option value="FONT">FONT</option>
+                        <option value="DOCUMENT">DOCUMENT</option>
+                        <option value="STYLESHEET">STYLESHEET</option>
+                        <option value="PING">PING</option>
+                        <option value="WEBSOCKET">WEBSOCKET</option>    
+                        <option value="MEDIA">MEDIA</option>
+                        <option value="OBJECT">OBJECT</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+                    <input type="text" onchange="predict()" oninput="predict()" id="domain" placeholder="ORIGIN" class="inputs"></input>
+                    <div id="result" class="results"></div>
+                    <div id="result-blockit" class=""></div>
+                    <div id="latency" class="results"></div>
+                </td>
+                </td>
+                </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
