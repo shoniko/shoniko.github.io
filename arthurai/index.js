@@ -16,19 +16,19 @@ const charIndex = {
 let typeIndex = {};
 
 function onTfLoaded() {
-    typeIndex =  {
-        'SCRIPT':           tf.tensor([[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]),
-        'SUBDOCUMENT':      tf.tensor([[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]),
-        'IMAGE':            tf.tensor([[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]]),
-        'XMLHTTPREQUEST':   tf.tensor([[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]]),
-        'FONT':             tf.tensor([[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]),
-        'DOCUMENT':         tf.tensor([[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]]),
-        'STYLESHEET':       tf.tensor([[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]]),
-        'OTHER':            tf.tensor([[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]]),
-        'PING':             tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]]),
-        'WEBSOCKET':        tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]),
-        'MEDIA':            tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]]),
-        'OBJECT':           tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]])
+    typeIndex = {
+        'SCRIPT': tf.tensor([[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]),
+        'SUBDOCUMENT': tf.tensor([[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]),
+        'IMAGE': tf.tensor([[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]]),
+        'XMLHTTPREQUEST': tf.tensor([[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]]),
+        'FONT': tf.tensor([[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]),
+        'DOCUMENT': tf.tensor([[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]]),
+        'STYLESHEET': tf.tensor([[0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]]),
+        'OTHER': tf.tensor([[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]]),
+        'PING': tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]]),
+        'WEBSOCKET': tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]),
+        'MEDIA': tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]]),
+        'OBJECT': tf.tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]])
     }
 
     loadModel();
@@ -38,10 +38,9 @@ function stringToTensor(text, padLength) {
     // Based on https://github.com/tensorflow/tfjs-examples/blob/master/sentiment/index.js#L60
     const inputText = text.trim().toLowerCase();
     const inputBuffer = tf.buffer([1, padLength], 'float32');
-    for (let i = 0; i < inputText.length; ++i)
-    {
-      const chr = inputText[i];
-      inputBuffer.set(charIndex[chr], 0, i);
+    for (let i = 0; i < inputText.length; ++i) {
+        const chr = inputText[i];
+        inputBuffer.set(charIndex[chr] / 42, 0, i);
     }
     return inputBuffer.toTensor();
 }
@@ -54,9 +53,9 @@ function loadScript(url, callback) {
     var script = document.createElement("script")
     script.type = "text/javascript";
 
-    script.onload = function() {
+    script.onload = function () {
         if (callback) {
-          callback();
+            callback();
         }
     };
 
